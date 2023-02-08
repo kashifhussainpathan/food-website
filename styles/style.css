@@ -1,4 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --color-primary:#117964;
+}
+
 body{
-    background-color: red
-    ;
+    font-family: "poppins", sans-serif;
+}
+
+/* ######## Utility Classes ######### */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    padding: 1em 2em;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.btn-primary{
+    color: #fff;
+    background-color: var(--color-primary);
+    border: 1px solid transparent;
+}
+.btn-primary:hover{
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+/* ############# Navbar Styling ############## */
+
+/*------- Navbar Stying For Desktop --------- */
+
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.logo{
+    order: 1;
+    font-size: 3rem;
+    color: var(--color-primary);
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: var(--color-primary);
+}
+
+/* ############# Showcase Area ############ */
+.showcase-area{
+    background-image:linear-gradient(rgba(240,240,240,0.144), rgba(255,255,255,0.336)), url("../assets/header-image2.jpg");
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.showcase-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.6rem;
+}
+
+.main-title{
+    text-transform: uppercase;
 }
